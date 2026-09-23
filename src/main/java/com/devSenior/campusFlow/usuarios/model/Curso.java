@@ -1,7 +1,17 @@
 package com.devSenior.campusFlow.usuarios.model;
 
 
-import jakarta.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "cursos")
@@ -13,6 +23,17 @@ public class Curso {
 
     private String nombre;
 
+    @ManyToOne
+    @JoinColumn(name = "instructor_id")
+    private Usuario instructor;
+
+    @ManyToMany
+    @JoinTable(
+            name = "curso_estudiante",
+            joinColumns = @JoinColumn(name = "curso_id"),
+            inverseJoinColumns = @JoinColumn(name = "estudiante_id")
+    )
+    private List<Usuario> estudiantes = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -28,5 +49,21 @@ public class Curso {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Usuario getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Usuario instructor) {
+        this.instructor = instructor;
+    }
+
+    public List<Usuario> getEstudiantes() {
+        return estudiantes;
+    }
+
+    public void setEstudiantes(List<Usuario> estudiantes) {
+        this.estudiantes = estudiantes;
     }
 }
