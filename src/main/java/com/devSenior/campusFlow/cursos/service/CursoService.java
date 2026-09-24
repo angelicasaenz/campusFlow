@@ -2,6 +2,7 @@ package com.devSenior.campusFlow.cursos.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 import com.devSenior.campusFlow.common.exception.ResourceNotFoundException;
 import com.devSenior.campusFlow.cursos.dto.CrearCursoRequest;
 import com.devSenior.campusFlow.cursos.dto.CursoResponse;

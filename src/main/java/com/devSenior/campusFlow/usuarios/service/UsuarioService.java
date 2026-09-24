@@ -2,6 +2,7 @@ package com.devSenior.campusFlow.usuarios.service;
 
 import java.util.List;
 import java.util.stream.Collectors;
+
 import com.devSenior.campusFlow.common.exception.EmailDuplicadoException;
 import com.devSenior.campusFlow.common.exception.ResourceNotFoundException;
 import com.devSenior.campusFlow.usuarios.dto.ActualizarUsuarioRequest;
