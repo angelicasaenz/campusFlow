@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = "com.devsenior.campusflow")
+@ComponentScan(basePackages = "com.devSenior.campusFlow")
 @SpringBootApplication
 public class CampusFlowApplication {
 

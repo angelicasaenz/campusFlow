@@ -2,6 +2,9 @@ package com.devSenior.campusFlow.usuarios.model;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.devSenior.campusFlow.cursos.model.Curso;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;

@@ -1,8 +1,11 @@
-package com.devSenior.campusFlow.usuarios.model;
+package com.devSenior.campusFlow.cursos.model;
 
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.devSenior.campusFlow.usuarios.model.Usuario;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
